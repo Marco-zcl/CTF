@@ -1,1 +1,1 @@
-copy  1.png/b+1.php/a  3.png
+copy  1.png/b+2.php/a  3.png
