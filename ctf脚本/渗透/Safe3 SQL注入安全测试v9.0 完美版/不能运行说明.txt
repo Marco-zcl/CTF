@@ -1,0 +1,2 @@
+软件需要安装.net 2.0才能运行，下载地址如下
+http://www.microsoft.com/downloads/en/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5
