@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+ <head>  
+  <meta charset="utf-8"> 
+  <title>模拟比赛</title> 
+  <link rel="stylesheet" href="css/bootstrap.css"> 
+  <link rel="Stylesheet" href="css/public.css"> 
+  <link rel="shortcut icon" href="css/favicon.png" type="image/png"> 
+  <script src="js/jquery-3.1.1.js"></script> 
+  <script src="js/bootstrap.js"></script> 
+  <script src="js/jquery.dataTables.js"></script> 
+  <script src="js/common.js"></script> 
+  <script src="js/platform.js"></script> 
+  <script>
+	INFO = {
+		difference : parseInt("1712801715559") - Date.now(),
+		begin : [ parseInt("1577838600000"),
+				parseInt("1710677431000"),
+				parseInt("1577838600000") ],
+		end : [ parseInt("1641011400000"), parseInt("1742213434000"),
+				parseInt("1641011400000") ]
+	}
+</script> 
+  <script src="js/index.js"></script> 
+ </head>
+ <body> 
+  <nav class="navbar navbar-default navbar-inverse"> 
+   <div class="container-fluid"> 
+    <div class="navbar-header"> 
+     <img class="logo" src="images/logo.png"> 
+     <a class="navbar-brand" href="javascript:location.reload(true);">模拟比赛</a> 
+    </div> 
+    <ul class="nav navbar-nav navbar-right"> 
+     <li><a>欢迎&nbsp;TEAM05&nbsp;战队&nbsp;cs005&nbsp;登录系统</a></li> 
+     <li><a href="#answerLogModal" data-toggle="modal">答题记录</a></li> 
+     <li><a href="#updatePasswordModal" data-toggle="modal">修改密码</a></li> 
+     <li><a href="#" data-form-action="gflogout">退出</a></li> 
+    </ul> 
+   </div> 
+  </nav> 
+  <div class="container-fluid"> 
+   <div class="row"> 
+    <div class="col-md-2" id="frame-menu"> 
+     <div class="list-group" style="font-size: 14px;"></div> 
+    </div> 
+    <div class="col-md-10" id="frame-content"> 
+     <div id="content_home"> 
+      <h5>队员信息</h5> 
+      <div class="well"> 
+       <p>战队：TEAM05</p> 
+       <p>队员：cs005</p> 
+      </div> 
+      <h5>比赛描述</h5> 
+      <div class="well">
+       模拟比赛
+      </div> 
+     </div> 
+     <div id="content_question"> 
+      <table class="table table-bordered table-prop"> 
+       <tbody>
+        <tr> 
+         <th>剩余时间：</th> 
+         <td data-timeout="0"></td> 
+        </tr> 
+        <tr> 
+         <th>任务描述：</th> 
+         <td data-name="taskDescription"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <br> 
+      <form data-url="front/setAnswer.json?stepType=0" data-type="post"> 
+       <input type="hidden" name="infoId"> 
+       <input type="hidden" name="paperId"> 
+       <input type="hidden" name="questionId"> 
+       <input type="hidden" name="ip"> 
+       <table class="table table-bordered table-prop"> 
+        <tbody>
+         <tr> 
+          <td colspan="2">第 <span data-name="questionIndex"></span> 题 </td> 
+         </tr> 
+         <tr> 
+          <th>类型：</th> 
+          <td data-name="questionTypeText"></td> 
+         </tr> 
+         <tr> 
+          <th>描述：</th> 
+          <td data-name="questionDescription"></td> 
+         </tr> 
+         <tr> 
+          <th>题目：</th> 
+          <td> 
+           <div data-name="questionTopic"></div> </td> 
+         </tr> 
+         <tr> 
+          <th>提示：</th> 
+          <td data-elm="questionTipsText"></td> 
+         </tr> 
+         <tr> 
+          <th>答案：</th> 
+          <td data-elm="valueElms"></td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><button type="submit" class="btn btn-primary">提交</button></td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </form> 
+     </div> 
+     <div id="content_single"> 
+      <table class="table table-bordered table-prop"> 
+       <tbody>
+        <tr> 
+         <th>剩余时间：</th> 
+         <td data-timeout="1"></td> 
+        </tr> 
+        <tr> 
+         <th>任务描述：</th> 
+         <td data-name="taskDescription"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <br> 
+      <table class="table table-bordered table-prop"> 
+       <tbody>
+        <tr> 
+         <td colspan="2">第 <span data-name="questionIndex"></span> 题 </td> 
+        </tr> 
+        <tr> 
+         <th>描述：</th> 
+         <td data-name="questionDescription"></td> 
+        </tr> 
+        <tr> 
+         <th>题目：</th> 
+         <td>
+          <div data-name="questionTopic"></div></td> 
+        </tr> 
+        <tr> 
+         <th>攻击机场景：</th> 
+         <td data-elm="attack"></td> 
+        </tr> 
+        <tr> 
+         <th>靶机场景：</th> 
+         <td data-elm="deffence"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <form data-url="front/setAnswer.json?stepType=2&amp;ip=" data-type="post"> 
+       <input type="hidden" name="infoId"> 
+       <input type="hidden" name="paperId"> 
+       <input type="hidden" name="questionId"> 
+       <table class="table table-bordered table-prop"> 
+        <tbody>
+         <tr> 
+          <th>答案：</th> 
+          <td data-elm="valueElms"></td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><button type="submit" class="btn btn-primary">提交</button></td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </form> 
+      <form data-url="front/setAttach.json" data-type="post"> 
+       <input type="hidden" name="infoId"> 
+       <input type="hidden" name="paperId"> 
+       <input type="hidden" name="questionId"> 
+       <table class="table table-bordered table-prop"> 
+        <tbody>
+         <tr> 
+          <th>附件：</th> 
+          <td><input type="file" class="form-control" name="attach"></td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><button type="submit" class="btn btn-primary">提交</button></td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </form> 
+      <table class="table"> 
+       <thead> 
+        <tr> 
+         <th width="150">提交时间</th> 
+         <th>值</th> 
+         <th width="60">得分</th> 
+        </tr> 
+       </thead> 
+       <tbody data-elm="answerElms" data-value="timestamp,value,score"></tbody> 
+      </table> 
+     </div> 
+     <div id="content_chaos"> 
+      <table class="table table-bordered table-prop"> 
+       <tbody>
+        <tr> 
+         <th>剩余时间：</th> 
+         <td data-timeout="2"></td> 
+        </tr> 
+        <tr> 
+         <th>任务描述：</th> 
+         <td data-name="taskDescription"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <br> 
+      <table class="table table-bordered table-prop"> 
+       <tbody>
+        <tr> 
+         <td colspan="2">场景 <span data-name="questionIndex"></span> </td> 
+        </tr> 
+        <tr> 
+         <th>描述：</th> 
+         <td data-name="questionDescription"></td> 
+        </tr> 
+        <tr> 
+         <th>题目：</th> 
+         <td>
+          <div data-name="questionTopic"></div></td> 
+        </tr> 
+        <tr> 
+         <th>攻击机场景：</th> 
+         <td data-elm="attack"></td> 
+        </tr> 
+        <tr> 
+         <th>靶机场景：</th> 
+         <td data-elm="deffence"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <form data-url="front/setAnswer.json" data-type="post"> 
+       <input type="hidden" name="infoId"> 
+       <input type="hidden" name="paperId"> 
+       <input type="hidden" name="questionId"> 
+       <table class="table table-bordered table-prop"> 
+        <tbody>
+         <tr> 
+          <th>类型：</th> 
+          <td><select class="form-control" name="stepType"> <option value="1">KEY</option> <option value="2">FLAG</option> </select></td> 
+         </tr> 
+         <tr> 
+          <th>地址：</th> 
+          <td><input type="text" class="form-control" name="ip"></td> 
+         </tr> 
+         <tr> 
+          <th>答案：</th> 
+          <td data-elm="valueElms"></td> 
+         </tr> 
+         <tr> 
+          <td></td> 
+          <td><button type="submit" class="btn btn-primary">提交</button></td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </form> 
+      <table class="table"> 
+       <thead> 
+        <tr> 
+         <th width="150">提交时间</th> 
+         <th width="120">地址</th> 
+         <th width="60">类型</th> 
+         <th>值</th> 
+         <th width="60">得分</th> 
+        </tr> 
+       </thead> 
+       <tbody data-elm="answerElms" data-value="timestamp,ip,typesStep[stepType],value,score"></tbody> 
+      </table> 
+     </div> 
+    </div> 
+    <div class="content_divider" id="frame-divider"></div> 
+   </div> 
+  </div> 
+  <div class="modal fade" tabindex="-1" id="answerLogModal"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <h4>答题记录</h4> 
+      <button type="button" class="close" data-dismiss="modal"></button> 
+     </div> 
+     <div class="modal-body table-wrap"> 
+      <table class="table-prop"> 
+       <tbody>
+        <tr> 
+         <th style="width: 80px">单兵闯关排名：</th> 
+         <td style="width: 80px" data-name="index1"></td> 
+         <th style="width: 80px">分组混战排名：</th> 
+         <td style="width: 80px" data-name="index2"></td> 
+         <th style="width: 80px">违规原因：</th> 
+         <td data-name="protocols" data-format="${protocols.replace('ping','连通性')}"></td> 
+        </tr> 
+        <tr> 
+         <th>单兵闯关总分：</th> 
+         <td data-name="sum1"></td> 
+         <th>分组混战总分：</th> 
+         <td data-name="sum2"></td> 
+         <th>违规扣分：</th> 
+         <td data-name="sum5"></td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <div class="btn-toolbar"> 
+       <div class="table-search"> 
+        <input type="text" class="form-control" placeholder="请输入关键字" name="search"> 
+        <button type="button" class="btn btn-primary" data-page="search"> <i class="glyphicon glyphicon-search"></i> 搜索 </button> 
+       </div> 
+      </div> 
+      <table class="table border table-bordered table-hover table-striped dataTable" data-render="{ajax:{url:'front/answerLog.json'}}"> 
+       <thead> 
+        <tr> 
+         <th class="table-searchable" data-item="{mData:'username'}">用户名<i class="icon-chevron-up"></i></th> 
+         <th class="table-searchable" data-item="{mData:'corpsName'}">战队<i class="icon-chevron-up"></i></th> 
+         <th class="table-searchable" data-item="{mData:'effectCorpsName'}">目标战队<i class="icon-chevron-up"></i> 
+          <div data-template>
+           ${taskType!=2?'':corpsName==effectCorpsName?'':effectCorpsName}
+          </div> </th> 
+         <th data-item="{mData:'questionName'}">考题<i class="icon-chevron-up"></i></th> 
+         <th data-item="{mData:'stepType'}">类型<i class="icon-chevron-up"></i> 
+          <div data-template>
+           ${taskType!=2?'':stepType==1?'KEY':stepType==2?'FLAG':''}
+          </div> </th> 
+         <th data-item="{mData:'ip'}">地址<i class="icon-chevron-up"></i></th> 
+         <th data-item="{mData:'value'}">提交答案<i class="icon-chevron-up"></i></th> 
+         <th data-item="{mData:'score'}">得分<i class="icon-chevron-up"></i></th> 
+         <th width="148" data-item="{mData:'timestamp'}">提交时间<i class="icon-chevron-up"></i></th> 
+        </tr> 
+       </thead> 
+      </table> 
+      <div class="pagination"> 
+       <button type="button" class="btn btn-primary" data-page="prev">&lt;</button> 
+       <span> 第<input class="form-control" name="page">页 /共<span data-page-total> </span>页 <button type="button" class="btn btn-primary" data-page="goto">go</button> </span> 
+       <button type="button" class="btn btn-primary" data-page="next">&gt;</button> 
+      </div> 
+     </div> 
+     <div class="modal-footer"> 
+      <button type="button" class="btn btn-primary" data-dismiss="modal">返回</button> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <form data-url="/front/updatePassword.json" data-type="post"> 
+   <div class="modal fade" tabindex="-1" id="updatePasswordModal"> 
+    <div class="modal-dialog" style="width: 500px"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <h4>修改密码</h4> 
+       <button type="button" class="close" data-dismiss="modal"></button> 
+      </div> 
+      <div class="modal-body table-wrap"> 
+       <div class="form-group"> 
+        <input type="password" class="form-control" name="oldPassword" autocomplete="off" placeholder="请输入原密码"> 
+       </div> 
+       <div class="form-group"> 
+        <input type="password" class="form-control" name="newPassword" autocomplete="off" placeholder="请输入新密码"> 
+       </div> 
+      </div> 
+      <div class="modal-footer"> 
+       <button type="submit" class="btn btn-primary">确定</button> 
+       <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </form> 
+  <div class="footer-fake"></div> 
+  <footer class="navbar-fixed-bottom footer"> 
+   <div class="container">
+    Copyright (©) 网络空间安全实战平台
+   </div> 
+  </footer>   
+ </body>
+</html>

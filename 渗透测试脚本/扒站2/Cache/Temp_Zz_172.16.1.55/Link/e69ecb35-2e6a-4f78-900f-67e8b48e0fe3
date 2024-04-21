@@ -1,0 +1,61 @@
+.loginForm {
+	margin: 0 auto;
+	width: 975px;
+	height: 480px;
+	margin-top: 60px;
+}
+
+.header_info {
+	background: #135;
+}
+
+.title {
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.left_info {
+	width: 550px;
+	float: left;
+	overflow: hidden;
+}
+
+.right_info {
+	box-sizing: border-box;
+	width: 425px;
+	float: left;
+	padding-left: 50px;
+}
+
+.right_info input {
+	width: 100%;
+	font-size: 15px;
+	font-weight: 400;
+	border: 1px solid #8b8b8b;
+	outline: none;
+	margin: 20px 0;
+	padding: 15px 10px 15px 50px;
+}
+
+.right_info input[type="text"] {
+	background: url(images/user.png) no-repeat 7px 10px;
+	padding: 15px 10px 15px 50px;
+}
+
+.right_info input[type="password"] {
+	background: url(images/lock.png) no-repeat 8px 10px;
+}
+
+.right_info input[type="submit"] {
+	background: #357eb4;
+	color: #FFF;
+	border: none;
+	font-size: 18px;
+	padding: 10px 20px;
+}
+
+.right_info input[type="submit"]:hover {
+	background:#3071a9;
+}

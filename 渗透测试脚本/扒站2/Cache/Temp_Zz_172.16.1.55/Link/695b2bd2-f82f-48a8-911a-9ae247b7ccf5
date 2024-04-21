@@ -1,0 +1,15 @@
+html, body {padding : 0; margin : 0; width:100%; height : 100%;background-color:#000;}
+*, *:after, *:before { box-sizing: border-box;padding :0, margin:0}
+
+.f-l{float:left}
+.f-r{float:right}
+.c-fix{clear:both}
+
+.cp{cursor:pointer;}
+.underline{text-decoration:underline;}
+.fw{font-weight:bold}
+
+.f-arial{font-family:Arial}
+.f-yahei{font-family:微软雅黑}
+
+.center{text-align:center}

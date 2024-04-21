@@ -1,0 +1,322 @@
+.Wdate {
+	background: #fff url(../images/datePicker.gif)
+		no-repeat right;
+}
+
+.navbar-default {
+	background: #135;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:HOVER {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+	{
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover,
+	.navbar-default .navbar-nav>.open>a:focus {
+	color: #fff;
+	background: transparent;
+}
+
+.navbar-header .logo {
+	float: left;
+	height: 50px;
+}
+
+.menu-group {
+	float: left;
+	border: 1px solid #ddd;
+	border-left: none;
+}
+
+.menu-group:FIRST-CHILD {
+	border-top-left-radius: 4px;
+	border-left: 1px solid #ddd;
+}
+
+.menu-group:LAST-CHILD {
+	border-top-right-radius: 4px;
+}
+
+.menu-group .list-group {
+	display: none;
+	position: absolute;
+	z-index: 999;
+}
+
+.menu-group:HOVER .list-group {
+	display: inline-block;
+}
+
+.menu-header {
+	padding: 10px 15px;
+}
+
+.menu-group.active .menu-header {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #428bca;
+}
+
+iframe {
+	border: none;
+}
+
+#frame-menu, #frame-content {
+	overflow: hidden;
+}
+
+.list-group {
+	border-radius: 4px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	font-size: 20px;
+}
+
+.list-group-item:FIRST-CHILD {
+	border-radius: 0
+}
+
+.list-group-item:LAST-CHILD {
+	margin-bottom: -1px;
+	border-radius: 0
+}
+
+.list-lv2 {
+	text-indent: 20px;
+}
+
+.list-lv3 {
+	text-indent: 40px;
+}
+
+.list-group-item[data-toggle='collapse']:BEFORE {
+	font-family: 'Glyphicons Halflings';
+	font-size: 10px;
+	margin-right: 10px;
+	position: relative;
+	top: -1px;
+	content: "\2212";
+}
+
+.list-group-item[data-toggle='collapse'].collapsed:BEFORE {
+	content: "\002b";
+}
+
+a.list-group-item:hover, a.list-group-item:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+.content_divider {
+	width: 8px;
+	height: 100%;
+	position: absolute;
+	cursor: col-resize;
+	margin-left: -4px;
+}
+
+.content_divider:BEFORE {
+	content: " ";
+	width: 1px;
+	height: 100%;
+	display: block;
+	background: #ccc;
+	margin: auto;
+}
+
+.btn-toolbar form {
+	display: inline-block;
+}
+
+.table-prop {
+	width: 100%;
+}
+
+.table-prop th {
+	text-align: right;
+	vertical-align: top;
+	width: 120px;
+	color: #428bca;
+}
+
+.table-prop td {
+	word-break: break-all;
+}
+
+.table-prop td[colspan] {
+	text-align: center;
+}
+
+.table-prop select, .table-prop input {
+	width: auto;
+}
+
+textarea {
+	resize: none;
+}
+
+.table-wrap form {
+	display: inline-block;
+}
+
+.btn-toolbar {
+	margin-bottom: 10px;
+}
+
+.table-search {
+	display: inline-block;
+	float: right;
+}
+
+.table-search input {
+	display: inline-block;
+	width: auto;
+}
+
+[data-template] {
+	display: none;
+}
+
+.pagination {
+	display: block;
+	text-align: center;
+}
+
+.pagination input {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}
+
+.dataTable th i {
+	float: right;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.dataTable th.order {
+	color: #269abc;
+}
+
+.table-searchable:before {
+	top: 1px;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	content: "\e003";
+}
+
+.icon-chevron-up:before {
+	content: "\e113";
+}
+
+.icon-chevron-down:before {
+	content: "\e114";
+}
+
+.dataTable {
+	table-layout: fixed;
+}
+
+.dataTable td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+[data-NotNull] th:BEFORE {
+	content: "*";
+	color: #f00;
+}
+
+.dataTable .form-control {
+	display: inline-block;
+}
+
+.form-control[size] {
+	width: auto;
+}
+
+.ajax-progress {
+	float: left;
+	width: 80%;
+	margin: 7px 0;
+}
+
+input[type='file'] {
+	padding: 3px;
+}
+
+select[multiple].inline {
+	height: 42px;
+	overflow: hidden;
+}
+
+select[multiple].inline option {
+	display: inline-block;
+	margin: 5px;
+}
+
+select[multiple] option:BEFORE {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	content: "\e157";
+	margin-right: 2px;
+}
+
+select[multiple] option.active:BEFORE {
+	content: "\e067";
+}
+
+.page-title {
+	font-size: 16px;
+}
+
+.modal-dialog {
+	width: 90%;
+}
+
+.modal-content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #135;
+	color: #fff;
+}
+
+.footer-fake {
+	height: 50px;
+}
+
+body {
+	background: #fcfcfc;
+}
+
+[data-timeout] {
+	
+}
+
+[data-name="questionTopic"] {
+	min-height: 200px;
+}

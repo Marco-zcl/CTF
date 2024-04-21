@@ -1,0 +1,10 @@
+https://www.baidu.com/
+https://www.baidu.com:80/
+https://fanyi.baidu.com/
+http://fanyi.baidu.com/
+https://www.baidu.com/
+https://www.baidu.com/
+https://www.baidu.com/
+http://fanyi.baidu.com/
+http://fanyi.baidu.com/
+http://fanyi.baidu.com/
